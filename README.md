@@ -1,7 +1,8 @@
 # vuejs-jsx-template
 
 Simple Vuejs JSX Starter using <b>@vue/babel-preset-jsx</b> in version <b>1.0.0-beta.2</b>
-It should demonstrate a very basic data flow using JSX and non JSX components.
+
+It should demonstrate the basic usage of JSX and non-JSX components.
 
 DEMO:
 https://oardi.github.io/vuejs-jsx-template/dist/
@@ -13,7 +14,8 @@ Includes
 - button-counter component with prop and outpu via $emit
 
 USAGE:
-npm start
+
+`npm start`
 
 TODO:
 - add more examples
