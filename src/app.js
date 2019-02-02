@@ -12,7 +12,7 @@ export const App = Vue.component('app', {
 	render: function (h) {
 		return (
 			<div>
-				<AppHeader title={this.hello} on-clicked={() => console.warn('asdf')} />
+				<AppHeader title={this.hello} />
 				<ButtonCounter count={this.count} on-clicked={() => { this.count++ }} />
 				<div>
 					<input v-model={this.count} />
