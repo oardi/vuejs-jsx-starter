@@ -154,6 +154,21 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "../node_modules/css-loader/dist/cjs.js!./styles.css":
+/*!***********************************************************!*\
+  !*** ../node_modules/css-loader/dist/cjs.js!./styles.css ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "../node_modules/css-loader/dist/runtime/api.js")(false);
+// Module
+exports.push([module.i, "*, ::after, ::before {\r\n    box-sizing: border-box;\r\n}\r\n\r\nhtml,\r\nbody {\r\n    margin: 0;\r\n    padding: 0;\r\n    font-family: sans-serif;\r\n}\r\n\r\n.container-fluid {\r\n    width: 100%;\r\n    padding-right: 15px;\r\n    padding-left: 15px;\r\n    margin-right: auto;\r\n    margin-left: auto;\r\n}\r\n\r\n.header {\r\n    background-color: #fff !important;\r\n    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;\r\n}\r\n\r\n.p-2 {\r\n    padding: 20px;\r\n}\r\n\r\n.pt-2 {\r\n    padding-top: 20px;\r\n}\r\n\r\n.btn {\r\n    display: inline-block;\r\n    font-weight: 400;\r\n    color: #212529;\r\n    text-align: center;\r\n    vertical-align: middle;\r\n    -webkit-user-select: none;\r\n    -moz-user-select: none;\r\n    -ms-user-select: none;\r\n    user-select: none;\r\n    background-color: transparent;\r\n    border: 1px solid transparent;\r\n    padding: .375rem .75rem;\r\n    font-size: 1rem;\r\n    line-height: 1.5;\r\n    border-radius: .25rem;\r\n    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;\r\n}\r\n\r\n.btn-primary {\r\n    color: #fff;\r\n    background-color: #007bff;\r\n    border-color: #007bff;\r\n}\r\n\r\n.form-control {\r\n\tdisplay: block;\r\n    width: 100%;\r\n    height: calc(2.25rem + 2px);\r\n    padding: 0 .75rem;\r\n    font-size: 1rem;\r\n    font-weight: 400;\r\n    line-height: 1.5;\r\n    color: #495057;\r\n    background-color: #fff;\r\n    background-clip: padding-box;\r\n    border: 1px solid #ced4da;\r\n    border-radius: .25rem;\r\n\ttransition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;\r\n\t/* box-sizing: border-box; */\r\n}\r\n", ""]);
+
+
+
+/***/ }),
+
 /***/ "./app.js":
 /*!****************!*\
   !*** ./app.js ***!
@@ -181,14 +196,15 @@ const App = vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('app', {
     };
   },
   render: function (h) {
-    return h("div", [h(_components_header_component__WEBPACK_IMPORTED_MODULE_2__["AppHeader"], {
+    return h("div", [h("div", {
+      "class": "header p-2"
+    }, [h(_components_header_component__WEBPACK_IMPORTED_MODULE_2__["AppHeader"], {
       "attrs": {
         "title": this.hello
-      },
-      "on": {
-        "clicked": () => console.warn('asdf')
       }
-    }), h(_components_button_counter_component__WEBPACK_IMPORTED_MODULE_3__["ButtonCounter"], {
+    })]), h("div", {
+      "class": "p-2"
+    }, [h("div", ["ButtonCount Component with Prop \"count\" and \"event\": \"clicked\":", h("div", [h(_components_button_counter_component__WEBPACK_IMPORTED_MODULE_3__["ButtonCounter"], {
       "attrs": {
         "count": this.count
       },
@@ -197,12 +213,18 @@ const App = vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('app', {
           this.count++;
         }
       }
-    }), h("div", [h("input", _vue_babel_helper_vue_jsx_merge_props__WEBPACK_IMPORTED_MODULE_0___default()([{
+    })])]), h("div", {
+      "class": "pt-2"
+    }, ["simple input type \"number\" with v-model = this.count", h("div", [h("input", _vue_babel_helper_vue_jsx_merge_props__WEBPACK_IMPORTED_MODULE_0___default()([{
       "on": {
         "input": $event => {
           if ($event.target.composing) return;
           this.count = $event.target.value;
         }
+      },
+      "class": "form-control",
+      "attrs": {
+        "type": "number"
       },
       "domProps": {
         "value": this.count
@@ -213,7 +235,7 @@ const App = vue__WEBPACK_IMPORTED_MODULE_1__["default"].component('app', {
         value: this.count,
         modifiers: {}
       }]
-    }]))])]);
+    }]))])])])]);
   }
 });
 
@@ -235,6 +257,7 @@ const ButtonCounter = vue__WEBPACK_IMPORTED_MODULE_0__["default"].component('but
   props: ['count'],
   render: function (h) {
     return h("button", {
+      "class": "btn btn-primary",
       "attrs": {
         "type": "button"
       },
@@ -277,6 +300,9 @@ const AppHeader = vue__WEBPACK_IMPORTED_MODULE_0__["default"].component('app-hea
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "../node_modules/vue/dist/vue.esm.js");
 /* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app */ "./app.js");
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles.css */ "./styles.css");
+/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_css__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({
@@ -284,7 +310,37 @@ new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({
   render: h => h(_app__WEBPACK_IMPORTED_MODULE_1__["App"])
 });
 
+/***/ }),
+
+/***/ "./styles.css":
+/*!********************!*\
+  !*** ./styles.css ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../node_modules/css-loader/dist/cjs.js!./styles.css */ "../node_modules/css-loader/dist/cjs.js!./styles.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../node_modules/style-loader/lib/addStyles.js */ "../node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app.ba363cdb6dc43e3d83bb.bundle.js.map
+//# sourceMappingURL=app.d69b150c8115654e9cd0.bundle.js.map

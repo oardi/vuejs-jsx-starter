@@ -32,7 +32,7 @@ module.exports = (env, argv) => {
 		module: {
 			rules: [
 				{ test: /\.js$/, loader: ['babel-loader'] },
-				{ test: /\.css$/, use: ["css-loader"] },
+				{ test: /\.css$/, use: ["style-loader", "css-loader"] },
 			]
 		},
 
