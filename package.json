@@ -16,8 +16,8 @@
 	"devDependencies": {
 		"@babel/cli": "^7.2.3",
 		"@babel/core": "^7.3.3",
-		"@vue/babel-helper-vue-jsx-merge-props": "^1.0.0-beta.2",
-		"@vue/babel-preset-jsx": "^1.0.0-beta.2",
+		"@vue/babel-helper-vue-jsx-merge-props": "^1.0.0-beta.3",
+		"@vue/babel-preset-jsx": "^1.0.0-beta.3",
 		"babel-loader": "^8.0.5",
 		"babel-plugin-syntax-jsx": "^6.18.0",
 		"clean-webpack-plugin": "^1.0.1",
