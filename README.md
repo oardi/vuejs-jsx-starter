@@ -19,4 +19,3 @@ USAGE:
 
 TODO:
 - add more examples
-- fix build:prod 
