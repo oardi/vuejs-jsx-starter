@@ -4,9 +4,6 @@ Simple Vuejs JSX Starter using <b>@vue/babel-preset-jsx</b>
 
 It should demonstrate the basic usage of JSX components.
 
-DEMO:
-https://oardi.github.io/vuejs-jsx-template/dist/
-
 Includes
 - index.jsx
 - app component (with jsx)
