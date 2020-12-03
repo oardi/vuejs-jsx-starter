@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import { App } from './app';
 
-import './styles.css';
+import './styles.scss';
 
 new Vue({
 	el: '#app',
